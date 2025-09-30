@@ -24,18 +24,9 @@ A C++ project that implements Breadth-First Search (BFS) and Depth-First Search 
   - Modular code structure
 
 ## 📁 Project Structure
-maze-solver/ 
-  ├── Maze.h # Maze class declaration 
-  ├── Maze.cpp # Maze class implementation 
-  ├── Solver.h # Abstract solver base class 
-  ├── BFSolver.h # BFS solver declaration 
-  ├── BFSolver.cpp # BFS solver implementation 
-  ├── DFSolver.h # DFS solver declaration 
-  ├── DFSolver.cpp # DFS solver implementation 
-  ├── main.cpp # Main program entry point 
-  ├── maze.txt # Sample maze file 
-  └── README.md # This file
-  
+maze-solver/ ├── Maze.h # Maze class declaration ├── Maze.cpp # Maze class implementation ├── Solver.h # Abstract solver base class ├── BFSolver.h # BFS solver declaration ├── BFSolver.cpp # BFS solver implementation ├── DFSolver.h # DFS solver declaration ├── DFSolver.cpp # DFS solver implementation ├── main.cpp # Main program entry point ├── maze.txt # Sample maze file └── README.md # This file
+
+
 ## 🛠️ Technologies Used
 
 - **Language**: C++11/C++17
@@ -57,13 +48,12 @@ maze-solver/
 
 ### Compilation
 
-'''bash
+`bash
 g++ -std=c++11 main.cpp Maze.cpp BFSolver.cpp DFSolver.cpp -o MazeSolver
 
-### Running A program
+Running the Program
 ./MazeSolver          # Linux/macOS
 MazeSolver.exe        # Windows
-
 
 📝 Maze File Format
 Create a text file (e.g., maze.txt) with the following format:
@@ -78,53 +68,38 @@ Create a text file (e.g., maze.txt) with the following format:
 4 4
 Format Explanation:
 
-  -> Line 1: rows columns (dimensions of the maze)
-  -> Next rows lines: Maze layout
-      ~  . = Open path
-      ~  # = Wall/Obstacle
-  -> Last 2 lines: Start position (row col) and End position (row col)
-
+Line 1: rows columns (dimensions of the maze)
+Next rows lines: Maze layout
+. = Open path
+# = Wall/Obstacle
+Last 2 lines: Start position (row col) and End position (row col)
 🎮 Usage
 Main Menu Options
-
-1. Use default maze: Load and solve the maze from maze.txt
-2. Enter custom maze: Create your own maze interactively
-3. Exit: Close the program
-
+Use default maze: Load and solve the maze from maze.txt
+Enter custom maze: Create your own maze interactively
+Exit: Close the program
 Solver Options
-
-1. Solve with DFS: Use Depth-First Search algorithm
-2. Solve with BFS: Use Breadth-First Search algorithm
-3. Back to main menu: Return to main menu
-
+Solve with DFS: Use Depth-First Search algorithm
+Solve with BFS: Use Breadth-First Search algorithm
+Back to main menu: Return to main menu
 Legend
 During visualization, the following symbols are used:
 
-Symbol	    Meaning
-S	          Start Position
-E	          End/Goal Position
-*	          Current Position (being explored)
-o	          Path Taken
-#	          Wall/Obstacle
-.	          Empty/Open Space
-
-
+Symbol	Meaning
+S	Start Position
+E	End/Goal Position
+*	Current Position (being explored)
+o	Path Taken
+#	Wall/Obstacle
+.	Empty/Open Space
 📊 Algorithm Comparison
-Feature	              BFS	                               DFS
-Path Quality	        Shortest path guaranteed	         May not find shortest path
-
-Memory Usage	        Higher (stores all nodes           Lower (stores only 
-                      at current level)	                 current path)
-
-Exploration Pattern   Level-by-level (breadth-first)     Deep exploration (depth-first)
-	
-Best For	            Finding shortest path	             Memory-constrained scenarios
-
-Time Complexity	      O(V + E)	                         O(V + E)
-
-Space Complexity	    O(V)	                             O(h) where h is max depth
-
-
+Feature	BFS	DFS
+Path Quality	Shortest path guaranteed	May not find shortest path
+Memory Usage	Higher (stores all nodes at current level)	Lower (stores only current path)
+Exploration Pattern	Level-by-level (breadth-first)	Deep exploration (depth-first)
+Best For	Finding shortest path	Memory-constrained scenarios
+Time Complexity	O(V + E)	O(V + E)
+Space Complexity	O(V)	O(h) where h is max depth
 💡 Example
 Sample Maze
 S . . . . 
@@ -132,23 +107,18 @@ S . . . .
 . # . . . 
 . . # # . 
 # . . . E 
-
 BFS Solution (Shortest Path - 8 steps)
 S . . . . 
 o # . # . 
 o # . . . 
 o o # # . 
 # o o o E 
-
 DFS Solution (May vary - explores deeply)
 S o o o o 
 . # . # o 
 . # . . o 
 . . # # o 
 # . . . E 
-
-
-
 🧪 Key Concepts Demonstrated
 Data Structures: Vectors, Queues, Stacks, Maps, Pairs
 Algorithms: Graph traversal (BFS, DFS)
@@ -166,19 +136,13 @@ File I/O operations
 Algorithm visualization techniques
 Problem-solving and algorithmic thinking
 Real-world pathfinding challenges
-
-
-
-Creating Custom Mazes
+🔧 Creating Custom Mazes
 You can create your own maze files following the format:
 
 <rows> <cols>
 <maze_layout>
 <start_row> <start_col>
 <end_row> <end_col>
-
-
-
 🐛 Troubleshooting
 Issue: Compilation errors
 
@@ -194,37 +158,47 @@ Issue: Visualization too fast/slow
 Solution: Adjust the Sleep() value in 
 Maze.cpp
  (default is 200ms)
-
-
-
 🚀 Future Enhancements
- ~ Add A* algorithm implementation
- ~ Add Dijkstra's algorithm
- ~ Implement maze generation algorithms
- ~ Add GUI using graphics library
- ~ Performance metrics and comparison
- ~ Save solution to file
- ~ Multiple maze file support
- ~ Animated path visualization
-
+ Add A* algorithm implementation
+ Add Dijkstra's algorithm
+ Implement maze generation algorithms
+ Add GUI using graphics library
+ Performance metrics and comparison
+ Save solution to file
+ Multiple maze file support
+ Animated path visualization
 👨‍💻 Author
 Sparsh Chaudhary
+Roll No: 2319667
+Section: D1
 
 🙏 Acknowledgments
-Inspired by classic pathfinding problems in computer science  Built as a demonstration of Data Structures and Algorithms concepts in C++Thanks to the open-source community for C++ resources and best practices
+Inspired by classic pathfinding problems in computer science
+Built as a demonstration of Data Structures and Algorithms concepts in C++
+Thanks to the open-source community for C++ resources and best practices
 Special thanks to professors and mentors for guidance
-
 📚 References
 Introduction to Algorithms (CLRS)
 C++ STL Documentation
 Graph Theory and Pathfinding Algorithms
 Object-Oriented Design Principles
-
 📞 Contact
 For questions, suggestions, or feedback:
 
-GitHub: [https://github.com/Sparsh17092004]
-Email: [3214sparshchaudhary@gmail.com]
+GitHub: https://github.com/Sparsh17092004
+Email: 3214sparshchaudhary@gmail.com
 ⭐ If you found this project helpful, please consider giving it a star! ⭐
 
 Note: This project was developed as part of coursework to demonstrate proficiency in C++, Data Structures, Algorithms, and Object-Oriented Design principles.
+
+
+This is your complete, polished README.md file ready for GitHub! It includes all your information and is properly formatted. Just copy and paste this into your README.md file in your repository. Good luck with your project! 🚀
+Feedback submitted
+
+
+
+
+
+Code
+
+Claude Sonn
