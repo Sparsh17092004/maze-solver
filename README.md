@@ -24,7 +24,17 @@ A C++ project that implements Breadth-First Search (BFS) and Depth-First Search 
   - Modular code structure
 
 ## 📁 Project Structure
-maze-solver/ ├── Maze.h # Maze class declaration ├── Maze.cpp # Maze class implementation ├── Solver.h # Abstract solver base class ├── BFSolver.h # BFS solver declaration ├── BFSolver.cpp # BFS solver implementation ├── DFSolver.h # DFS solver declaration ├── DFSolver.cpp # DFS solver implementation ├── main.cpp # Main program entry point ├── maze.txt # Sample maze file └── README.md # This file
+maze-solver/ 
+├── Maze.h # Maze class declaration 
+├── Maze.cpp # Maze class implementation 
+├── Solver.h # Abstract solver base class 
+├── BFSolver.h # BFS solver declaration 
+├── BFSolver.cpp # BFS solver implementation 
+├── DFSolver.h # DFS solver declaration 
+├── DFSolver.cpp # DFS solver implementation 
+├── main.cpp # Main program entry point 
+├── maze.txt # Sample maze file 
+└── README.md # This file
 
 
 ## 🛠️ Technologies Used
