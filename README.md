@@ -111,7 +111,7 @@ o	          Path Taken
 
 📊 Algorithm Comparison
 Feature	              BFS	                               DFS
-Path Quality	        Shortest path guaranteed	         May not find shortest path
+Path Quality	      Shortest path guaranteed	        May not find shortest path
 
 Memory Usage	        Higher (stores all nodes           Lower (stores only 
                       at current level)	                 current path)
